@@ -10,47 +10,34 @@
     <main class="table">
       <section class="table__header">
         <h1>Superhero Data</h1>
-        <div class="input-group">
-          <!-- Page size selector -->
-          <label for="pageSize">Page Size:</label>
-          <select id="pageSize">
-            <option value="10">10</option>
-            <option value="20" selected>20</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="all">All</option>
-          </select>
+        
+        <!-- Page size selector -->
+        <div>
+            <label for="pageSize">Page Size:</label>
+            <select id="pageSize">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="all">All</option>
+            </select>
+        </div>
 
-          <!-- Search Input -->
-          <label for="searchInput">Search:</label>
-          <input type="search" id="searchInput" placeholder="Search..." />
+        <!-- Search Input -->
+        <div class="input-group">
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" placeholder="Search Data...">
+        <label for="searchField">By:</label>
+        <select id="searchField">
+            <option value="name">Name</option>
+            <option value="fullName">Full Name</option>
+            <option value="race">Race</option>
+            <option value="gender">Gender</option>
+            <option value="placeOfBirth">Place of Birth</option>
+            <option value="alignment">Alignment</option>
+          </select>
         </div>
       </section>
-
-      <!-- Page size selector -->
-      <label for="pageSize">Page Size:</label>
-      <select id="pageSize">
-        <option value="10">10</option>
-        <option value="20" selected>20</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-        <option value="all">All</option>
-      </select>
-
-      <!-- Search Input -->
-      <label for="searchInput">Search:</label>
-      <input type="text" id="searchInput" placeholder="Search..." />
-
-      <!-- Search Field Selector -->
-      <label for="searchField">Search By:</label>
-      <select id="searchField">
-        <option value="name">Name</option>
-        <option value="fullName">Full Name</option>
-        <option value="race">Race</option>
-        <option value="gender">Gender</option>
-        <option value="placeOfBirth">Place of Birth</option>
-        <option value="alignment">Alignment</option>
-      </select>
 
       <!-- Table to display superheroes -->
       <section class="table__body">
@@ -72,13 +59,16 @@
           <tbody></tbody>
         </table>
       </section>
+      <section>
+        <!-- Pagination controls -->
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage">Next</button>
+        </div>
+      </section>
     </main>
-    <!-- Pagination controls -->
-    <div class="pagination">
-      <button id="prevPage">Previous</button>
-      <span id="pageInfo"></span>
-      <button id="nextPage">Next</button>
-    </div>
+    
 
     <script src="script.js"></script>
   </body>

@@ -25,6 +25,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+main{
+    height: auto;
+    overflow: scroll;
+}
 
 main.table {
     width: 82vw;
